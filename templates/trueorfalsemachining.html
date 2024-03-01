@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Dosis:wght@500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Serif&family=Playfair+Display:ital,wght@1,500&family=Protest+Riot&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=PT+Serif&family=Playfair+Display:ital,wght@1,500&family=Protest+Riot&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+        <title>True or False?-Mechanical Engineering</title>
+        <script>
+            // Wait for DOM content to load
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Get all elements with class "correct"
+                let corrects = document.querySelectorAll('.correct');
+
+                // Add event listeners to each correct button
+                for (let i = 0; i < corrects.length; i++) {
+                    corrects[i].addEventListener('click', function() {
+
+                        // Set background color to green
+                        corrects[i].style.backgroundColor = 'Green';
+
+                        // Go to parent element of correct button and find the first element with class "feedback" which has that parent
+                        corrects[i].parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                    });
+                }
+
+                // When any incorrect answer is clicked, change color to red
+                let incorrects = document.querySelectorAll(".incorrect");
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+
+                        // Set background color to red
+                        incorrects[i].style.backgroundColor = 'Red';
+
+                        // Go to parent element of correct button and find the first element with class "feedback" which has that parent
+                        incorrects[i].parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                    });
+                }
+
+               // Check free response submission
+               document.getElementById('check1').addEventListener('click', function() {
+                    let input = document.getElementById('input1');
+                    if (input.value === 'false') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback1').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback1').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check2').addEventListener('click', function() {
+                    let input = document.getElementById('input2');
+                    if (input.value === 'false') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback2').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback2').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check3').addEventListener('click', function() {
+                    let input = document.getElementById('input3');
+                    if (input.value === 'true') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback3').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback3').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check4').addEventListener('click', function() {
+                    let input = document.getElementById('input4');
+                    if (input.value === 'true') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback4').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback4').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check5').addEventListener('click', function() {
+                    let input = document.getElementById('input5');
+                    if (input.value === 'false') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback5').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback5').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check6').addEventListener('click', function() {
+                    let input = document.getElementById('input6');
+                    if (input.value === 'true') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback6').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback6').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check7').addEventListener('click', function() {
+                    let input = document.getElementById('input7');
+                    if (input.value === 'false') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback7').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback7').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check8').addEventListener('click', function() {
+                    let input = document.getElementById('input8');
+                    if (input.value === 'true') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback8').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback8').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check9').addEventListener('click', function() {
+                    let input = document.getElementById('input9');
+                    if (input.value === 'true') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback9').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback9').innerHTML = 'Incorrect';
+                    }
+                });
+                // Check free response submission
+                document.getElementById('check10').addEventListener('click', function() {
+                    let input = document.getElementById('input10');
+                    if (input.value === 'false') {
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.feedback10').innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.feedback10').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body class="page3">
+        <div class="header">
+            <h1>TRUE OR FALSE?</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h3>Is the statements true or false?</h3>
+                <h4>Type your answer by typing "true" or "false" in the box in lowercase!</h4>
+                <hr>
+                <!-- Add free response question here -->
+                <h4>1. We can use a saw machine for grinding, cutting, and polishing materials.</h4>
+                <input type="text" id="input1"></input>
+                <button id="check1" class="check">Check Answer</button>
+                <p class="feedback1"></p>
+
+                <!-- Add free response question here -->
+                <h4>2. A bevel protractor is a measuring device used for determining the height of objects and for marking of items to be worked on.</h4>
+                <input type="text" id="input2"></input>
+                <button id="check2" class="check">Check Answer</button>
+                <p class="feedback2"></p>
+
+                <!-- Add free response question here -->
+                <h4>3. A tool for making outer threads (bolts) and inner threads (nuts) is called a snei and tap.</h4>
+                <input type="text" id="input3"></input>
+                <button id="check3" class="check">Check Answer</button>
+                <p class="feedback3"></p>
+
+                <!-- Add free response question here -->
+                <h4>4. We can use a drilling machine to drill holes in various materials, such as metal, ceramic wood, or plastic.</h4>
+                <input type="text" id="input4"></input>
+                <button id="check4" class="check">Check Answer</button>
+                <p class="feedback4"></p>
+
+                <!-- Add free response question here -->
+                <h4>5. A vise is a tool used to file workpieces such as scraping uneven surfaces, scraping curved parts, and scraping holes in workpieces.</h4>
+                <input type="text" id="input5"></input>
+                <button id="check5" class="check">Check Answer</button>
+                <p class="feedback5"></p>
+
+                <!-- Add free response question here -->
+                <h4>6. If we want to measure the linear dimensions and the diameters of round objects with the help of the measuring jaws, we should use a vernier calipers.</h4>
+                <input type="text" id="input6"></input>
+                <button id="check6" class="check">Check Answer</button>
+                <p class="feedback6"></p>
+
+                <!-- Add free response question here -->
+                <h4>7. An instrument that is used for measuring the angles of the objects is called a micrometre screw gauge.</h4>
+                <input type="text" id="input7"></input>
+                <button id="check7" class="check">Check Answer</button>
+                <p class="feedback7"></p>
+
+                <!-- Add free response question here -->
+                <h4>8. A grinder is a handheld power tool that is used for grinding, cutting, and polishing materials.</h4>
+                <input type="text" id="input8"></input>
+                <button id="check8" class="check">Check Answer</button>
+                <p class="feedback8"></p>
+
+                <!-- Add free response question here -->
+                <h4>9. We can use a micrometre screw gauge to measure the diameter of thin wires and the thickness of small sheets.</h4>
+                <input type="text" id="input9"></input>
+                <button id="check9" class="check">Check Answer</button>
+                <p class="feedback9"></p>
+
+                <!-- Add free response question here -->
+                <h4>10. A file tool is used for cutting up bars of material or for cutting out shapes in plates of raw material.</h4>
+                <input type="text" id="input10"></input>
+                <button id="check10" class="check">Check Answer</button>
+                <p class="feedback10"></p>
+            </div>
+        </div>
+
+        <!-- Create a button that links to another page of the web -->
+        <a href="/clicktostart">
+            <button class="button">Back</button>
+        </a>
+    </body>
+</html>

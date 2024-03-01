@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Contact</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+      <style>
+        body,h1 {font-family: "Montserrat", sans-serif; font-size: 40px}
+        body,p {font-size: 18px}
+        img {margin-bottom: -7px}
+        .w3-row-padding img {margin-bottom: 12px}
+      </style>
+    </head>
+
+    <body>
+      <!-- Header -->
+      <header class="w3-center w3-margin-bottom">
+        <h1><b>CONTACT ME</b></h1>
+        <p><b>My name is Ika Wulandari</b></p>
+        <p><b>I am an English teacher at State Vocational High School 3 Surabaya</b></p>
+        <p><b>Please share your thoughts regarding this website and give comments / suggestions for its improvement in the box below</b></p>
+        <p><b>For more information, you can contact my WhatsApp number +89677-058048</b></p>
+      </header>
+
+    <!-- Photo Grid -->
+    <div class="w3-row" id="myGrid">
+      <div class="w3-third">
+        <img src="{{ url_for('static', filename='images/students.jpg') }}" style="width:100%">
+        <img src="{{ url_for('static', filename='images/umap24.jpg') }}" style="width:100%">
+        <img src="{{ url_for('static', filename='images/boe.jpg') }}" style="width:100%">
+      </div>
+
+      <div class="w3-third">
+        <img src="{{ url_for('static', filename='images/winner.jpg') }}" style="width:100%">
+        <img src="{{ url_for('static', filename='images/pens.jpg') }}" style="width:100%">
+        <img src="{{ url_for('static', filename='images/umap23.jpg') }}" style="width:100%">
+      </div>
+
+      <div class="w3-third">
+        <img src="{{ url_for('static', filename='images/workshop.jpg') }}" style="width:100%">
+        <img src="{{ url_for('static', filename='images/ki.jpg') }}" style="width:100%">
+        <img src="{{ url_for('static', filename='images/its.jpg') }}" style="width:100%">
+      </div>
+    </div>
+
+    <!-- Add a Comment Box -->
+    <div class="comment-box">
+      <!-- Create a form for users to submit a comment -->
+      <p>Leave a Comment</p>
+      <form action="/contact2" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <br>
+        <br>
+        <textarea name="comment" rows="4" cols="70" placeholder="Write Your Comment"></textarea>
+        <br>
+        <br>
+        <button class="btn btn-secondary" type="submit">Post Comment</button>
+      </form>
+    </div>
+
+    <div class="section">
+      <h3 style="text-align:center;">Newest Comments</h3>
+      <table>
+          <thead>
+              <tr>
+                  <th style="text-align:center;">Name</th>
+                  <th style="text-align:center;">Comment</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Loop through the database entries to display them in this table -->
+              {% for comment in comments %}
+                  <tr>
+                      <td style="text-align:center;">{{ comment.name }}</td>
+                      <td style="text-align:center;">{{ comment.comment }}</td>
+                  </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:10px">
+    <p class="w3-medium"><b>© 2024 IKA WULANDARI</b></p>
+
+  <!-- Create a button that links to another page of the web -->
+  <a href="/">
+      <button class="button">Back</button>
+  </a>
+  </footer>
+  </body>
+</html>

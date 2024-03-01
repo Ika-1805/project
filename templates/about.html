@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <title>About</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      * {
+          box-sizing: border-box;
+        }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Style the header */
+      header {
+        background-color: purple;
+        padding: 5px;
+        text-align: center;
+        font-size: 30px;
+        color: white;
+        }
+
+      /* Create two columns/boxes that floats next to each other */
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px; /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+      }
+
+      /* Style the list inside the menu */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 530px;
+        font-size: 15px;
+      }
+
+      /* Clear floats after the columns */
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Style the footer */
+      footer {
+        background-color: purple;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+      @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+      </style>
+    </head>
+<body>
+<!-- Create a header of the web -->
+  <header>
+    <h2>About This Website</h2>
+  </header>
+
+<section>
+  <nav>
+    <img src="{{ url_for('static', filename='images/eng5.jpg') }}" alt="English" width="100%" height="100%" object-fit= cover>
+  </nav>
+
+  <article>
+    <h1>This is a website that lets the students practice and test their vocational English competence based on their majors.</h1>
+    <p>This website is created to facilitate the vocational high school students in enhancing their vocational English competence by practicing and testing their understanding of the lessons they have learned at school in a fun and interactive way.</p>
+    <p>I provide the practice for all six majors available in State Vocational High School 3 Surabaya so that all students in my school can practice with this website.</p>
+    <p>The six majors are Light Vehicle and Automotive Engineering, Electrical Power Installation, Electrical Engineering, Mechanical Engineering, Construction and Building Engineering, and Visual Communication Design.</p>
+    <p>There will be three features that contain questions about vocational materials in English based on the students’ majors on the website:</p>
+    <ol>
+        <li><b>What am I?</b></li>
+        <p>This feature contains ten different questions for each major and the students should type the name that matches the picture that appears on the screen in the box provided.</p>
+        <li><b>What am I used for?</b></li>
+        <p>This feature contains ten different questions for each major and the students should choose one of the best answers that corresponds to the question.</p>
+        <li><b>True or False?</b></li>
+        <p>This feature contains ten different questions for each major and the students should state whether each of the statements is true or false by typing “true” if it is true or “false” if it is false in the box provided.</p>
+      </ol>
+  </article>
+</section>
+
+<footer>
+   <!-- Create a button that links to another page of the web -->
+    <a href="/">
+        <button class="button" type="button">Back</button>
+    </a>
+</footer>
+</body>
+</html>

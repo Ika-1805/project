@@ -1,5 +1,7 @@
-# Project Title: Vocational English Practice
-# Description: A website that lets the students practice and test their vocational English competence based on their majors. This website was created to facilitate vocational high school students in enhancing their vocational English competence by practicing their understanding in a fun and interactive way.
+# Project Title
+### Vocational English Practice
+# Description
+### A website that lets the students practice and test their vocational English competence based on their majors. This website was created to facilitate vocational high school students in enhancing their vocational English competence by practicing their understanding in a fun and interactive way.
 # Link to YouTube video: https://youtu.be/bRr5pXMdCF4
 # Installation
 To use the Vocational English Competence website, you need to have the following software installed on your computer, Python, CS50 Library for Python, Flask, and Github.

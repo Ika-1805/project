@@ -1,6 +1,5 @@
 # Overview
 Vocational English Practice is a web-based application developed with Python, HTML, CSS, JavaScript, Flask, and SQL. The main modules used to develop this web are Flask and CS50 Library for Python, while the database engine used is SQLite. The application is free to use and is available at https://github.com/Ika-1805/project.
-# Link to YouTube video:  https://youtu.be/bRr5pXMdCF4
 # Components of Project
 * My project is a web-based application consisting of 22 pages with 22 HTML files.
 * The home page (index.html) shows the main webpage which contains navbars and a button to go to the other web pages.
